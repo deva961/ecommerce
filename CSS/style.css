@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif,'Poppins';
+}
+.header{
+    z-index: -1;
+    background: radial-gradient(rgba(212, 7, 7, 0),rgba(3, 88, 32, 0.623));
+}
+.nav-bar{
+    padding: 20px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+nav{
+    flex: 1 ;
+    text-align: right;
+    cursor: pointer;
+}
+nav ul{
+    list-style-type: none;
+    display: inline-block;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #555;
+    margin-right: 20px;
+}
+nav ul li a:hover{
+    color: blueviolet;
+}
+.icons{
+    display: none;
+}
+.row{
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: auto;
+    display: flex;
+}
+.col-1{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-1 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.categories{
+    padding-right: 100px;
+    padding-left:100px ;
+}
+.smallcontainer{
+    margin: 30px;
+    max-width: 1080px;
+}
+.col-2{
+    min-width: 250px;
+    flex-basis: 23%;
+}
+.col-2 img{
+    width: 100%;
+    transition: 0.5s ease;
+}
+.col-2 img:hover{
+    transform: translateX(10px) translateY(10px);
+    box-shadow: 5px 5px gray;
+}
+.featuredcategories{
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+}.heading{
+    position: relative;
+    text-align: center;
+}
+.heading::after{
+    content: '';
+    background-color: red;
+    width: 80px;
+    border-radius: 50px;
+    height: 5px;
+    position: absolute;
+    margin: 8px auto 10px;
+    transform: translateX(-50%);
+}
+.products{
+    padding-left: 100px;
+    padding-top:40px ;
+    margin: auto;
+    max-width: 1080px;
+    padding-right:100px ;
+}
+.col-3{
+    flex-basis: 23%;
+    min-width: 200px;
+    transition: ease 0.5s;
+}
+.col-3 img{
+    width: 100%;
+    cursor: pointer;
+}
+.col-3:hover{
+    transform:  translateY(-10px);
+}
+/*--------media screen--------*/
+
+
+@media(max-width:600px) {
+    .icons{
+        display: block;
+        font-size: 20px;
+    }
+    nav ul li{
+        display: none;
+    }
+    .cart{
+        margin-right: 10px;
+    }
+}
+@media(max-width:500px){
+    .nav ul li{
+        display: block;
+    }
+}
